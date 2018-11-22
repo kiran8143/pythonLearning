@@ -5,15 +5,7 @@ for i in a:
     print(i)
 '''
 print(len(a))
-
 print(a[:len(a)])
-
-b = (1,2,3)
-
-for i in b:
-    print(i)
-print(b[:len(b)])
-
 #b[0] = 1
 
 a = ['alpha', 'bravo', 'charlie', 'delta', 'echo']
@@ -33,3 +25,16 @@ print(max(b))
 b.sort()
 print(b[0])
 print(sum(b))
+
+print("----------")
+print(b)
+del b[0]
+print(b)
+
+b.append(a)
+print("----------")
+print(b)
+
+del b
+#print(b) None Error
+

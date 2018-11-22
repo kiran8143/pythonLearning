@@ -67,3 +67,15 @@ while True:
 
     print(i, end=' ')
     i += 1
+
+
+print("--")
+inputNum = input()
+for i in range(int(inputNum)):
+    for j in range(int(inputNum)):
+        print("*",end='')
+    print("")
+
+inputNum = input()
+for i in range(int(inputNum)):
+    print(str(int(inputNum)-i))

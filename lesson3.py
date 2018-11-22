@@ -20,3 +20,9 @@ print(int(4/2))
 
 print("------문제-----------")
 print(int(0.2467*12+4.159))
+print("------문제-----------")
+
+i = input()
+j = input()
+sum= int(i) + int(j)
+print(str(sum))
