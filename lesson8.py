@@ -43,3 +43,27 @@ xValue = list(x.values())
 print(xValue)
 x.setdefault("xx",222)
 print(x)
+
+
+
+#x = input()
+x = raw_input()
+x = x.split()
+j = 0
+for i in x:
+    j += int(i)
+print(j)
+
+userInput = input()
+i = 0
+
+while i < int(userInput):
+
+    #x = raw_input()
+    x = input()
+    x = x.split()
+    z = 0
+    for j in x:
+        z +=int(j)
+    i += 1
+    print(str(z))
