@@ -57,3 +57,30 @@ print(b)
 
 for i in b:
     print(i)
+
+#palindrome
+#dojang.io
+word = "level"
+
+is_palindrome = True
+
+for i in range(len(word)//2):
+    if word[i] != word[-1-i]:
+        is_palindrome = False
+        break
+    
+print(is_palindrome)
+
+n = int(input())
+text = raw_input()
+
+words = text.split()
+if len(words) < n:
+    print("wrong")
+else:
+    for i in range(len(words) - (n-1)):
+        for j in range(n):
+            print(words[i+j])
+        print()
+
+
