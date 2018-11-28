@@ -72,8 +72,8 @@ for i in range(len(word)//2):
 print(is_palindrome)
 
 n = int(input())
-text = raw_input()
-
+#text = raw_input()
+text = input()
 words = text.split()
 if len(words) < n:
     print("wrong")
@@ -82,5 +82,3 @@ else:
         for j in range(n):
             print(words[i+j])
         print()
-
-
