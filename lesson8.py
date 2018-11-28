@@ -44,8 +44,6 @@ print(xValue)
 x.setdefault("xx",222)
 print(x)
 
-
-
 #x = input()
 x = raw_input()
 x = x.split()
