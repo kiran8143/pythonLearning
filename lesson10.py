@@ -1,3 +1,4 @@
+from decimal import Decimal
 def printHello():
     print("hello world")
 
@@ -93,4 +94,102 @@ print(int(x[0])- int(x[1]))
 print(int(x[0])* int(x[1]))
 print(int(x[0])// int(x[1]))
 print(int(x[0])% int(x[1]))
+'''
+
+x = {'a':1 , 'b':2, 'c':33333}
+def personal(a,b,c):
+    print(a)
+    print(b)
+    print(c)
+
+personal(**x)
+
+def personalA(a,b,c=1111):
+    print(a)
+    print(b)
+    print(c)
+
+personalA(1,2)
+personalA(1,2,3)
+
+korean, english, math = 10 ,20,30
+def maxScore(*args):
+    return max(args)
+print(maxScore(korean,english,math))
+
+def minScore(*args):
+    return min(args)
+
+def avgScore(*args):
+    return sum(args)/len(args)
+
+print(minScore(korean,english,math))
+print(avgScore(korean,english,math))
+'''
+def recursive():
+    print('hello')
+    recursive()
+    #recursive is must have a end condition
+
+recursive()
+'''
+
+def recursive(count):
+    if count == 0:
+        return
+    print('hello count : '+str(count))
+    recursive(count-1)
+
+recursive(5)
+
+def factorial(count):
+    if count == 1:
+        return 1
+    
+    return count * factorial(count-1)
+
+print(factorial(5))
+def pal(word):
+    if len(word) < 2:
+        return True
+
+    if word[0] != word[-1]:
+        return False
+    
+    return pal(word[1:-1])
+
+print(pal("AbA"))
+print("------")
+
+
+def selfNumber(number):
+    sum = 0
+    for i in str(number):
+        sum += int(i)
+
+    return number + sum
+
+li = []
+for i in range(1 , 10001):
+    li.append(selfNumber(i))
+
+li1 = list(range(10000))
+
+li3 = list(set(li1) - set(li))
+li3.sort()
+for i in range(len(li3)):
+    print(li3[i])
+
+'''
+x = input()
+i = 0
+a = []
+while i < x:
+    userInput = input()
+    a.append(userInput)
+    i += 1
+
+a.sort()
+for i in range(len(a)):
+    print(a[i])
 '''
