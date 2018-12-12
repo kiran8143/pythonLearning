@@ -50,3 +50,34 @@ for i in userInputList:
 
 print (int(sum / len(userInputList)))  
 
+userInput = input()
+userInput = userInput.split(" ")
+li = list(userInput)
+liSorted = list(userInput)
+liReversed = list(userInput)
+
+liSorted.sort()
+liReversed.reverse()
+trueFlag = False
+
+for i in range(len(liSorted)):
+    if li[i] == liSorted[i]:
+        trueFlag = True
+    elif len(li) / 2 == i:
+        continue
+
+if trueFlag:
+    print("ascending")
+    exit()
+
+ 
+for i in range(len(liReversed)):
+    if li[i] == liReversed[i]:
+        trueFlag = True
+    elif len(li) / 2 == i:
+        continue
+
+if trueFlag:
+    print("descending")
+    exit()
+print("mixed")
