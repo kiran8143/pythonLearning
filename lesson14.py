@@ -1,4 +1,3 @@
-'''
 import sys
 a = str(input())
 li = []
@@ -66,7 +65,6 @@ for i in range(0,len(li)):
     sum += int(li[i])
 
 print(sum)
-'''
 
 userInput = str(input())
 count = 0
@@ -76,3 +74,63 @@ for i in userInput:
     if count == 10:
         print("")
         count = 0
+
+userInput =raw_input()
+li = userInput.split(" ")
+liTemp = list()
+for i in range(0,len(li)):
+    liTemp.append(int(li[i])) 
+liTemp.sort()
+print(liTemp[1])
+
+userInput =input()
+if userInput == 1:
+    print('666')
+else:
+    print(str(userInput -1) + '666')
+
+
+def fibo(arg):
+    if arg < 2:
+        return arg
+    else:
+        return fibo(arg -1) + fibo(arg-2)
+
+memory = list()
+for i in range(100):
+    memory.append(0)
+
+def fibo1(arg):
+    if arg < 2:
+        return arg
+    if memory[arg] != 0:
+        return memory[arg]
+    memory[arg] = fibo1(arg - 1) + fibo1(arg - 2)
+    return memory[arg]
+print(fibo1(input()))
+
+
+userInput = raw_input()
+li = userInput.split(' ')
+sum = 0
+for i in range(len(li)):
+    sum += pow(int(li[i]),2)
+print(sum % 10)
+
+userInput = input()
+i = 0
+temp= dict()
+li = list()
+while i < int(userInput):
+    word = str(input())
+    if temp.get(word) == None:
+        temp[word] = word
+    i+=1
+
+for i in temp:
+    li.append(temp[i])
+
+li.sort(key=lambda x:(len(x),x))
+
+for i in range(len(li)):
+    print(li[i])
